@@ -206,6 +206,19 @@ body {
 .contentbox:hover {
     background-color: #EDDFDF;
 }
+
+/* firstPieChart class is taken separately for first diagram in company Page to rectify its alignment when screen size changes i.e.
+to make it responsive
+This was necessary since contentbox is common class used in lot of places, so if I make any change to it , than it will mess
+up alignment of other objects, which should not happen*/
+.firstPieChart{
+ padding: 20px;
+}
+
+.firstPieChart:hover{
+background-color: #EDDFDF;
+}
+
 .icons {
     margin: 0 auto;
     display: block;
@@ -667,3 +680,15 @@ body {
     margin-right: 5px;
     margin-bottom: 5px;
 }
+
+@media only screen and (min-width: 771px) and (max-width: 1258px){
+    /* For making First diagram(pie-chart) on Company page consistent with all screen sizes(making it responsive) */
+    [class="firstPieChart"] {
+        align: center;
+        width: 100%;
+        margin-left: 240px;
+    }
+}
+
+
+
